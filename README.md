@@ -4,7 +4,9 @@
 # table of class
 -변수(variables) : clear
 -연산자(operators) : clear
--제어문(controol statement) : ~ing
+-제어문(controol statement) : if, else if
+중첩 if
+- 선택문 : switch~case
 
 # mission
 - p. 58 Mission I, II
