@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>조건문</title>
 </head>
 <body>
     <h3>if ~ else</h3>
@@ -13,11 +13,37 @@
     </p>
     <code>
         <pre>
-            if(조건식) {
-                ..true일때 실행코드..;
-            } else{
-                ..false일때 실행코드..;
+            if(조건식1) {
+               조건식1이 true면 실행될코드1; 
+            } else if(조건식2){
+                조건식2가 true면 실행될 코드2;
             }
+            eles if (조건식 1,2,3,4,5...)
         </pre>
+    </code>
+    <!-- // prompt() vs confirm() : 차이를 구분!
+    // 계절구분
+    // 봄 : 3, 4, 5
+    // 여름 : 6, 7, 8
+    // 가을 : 9, 10, 11
+    // 겨울 : (나머지) 12, 1, 2 -->
+
+    <h2>if ~else if 예시</h2>    
+    <p>질의 응갑창을 이용해서, 현재는 몇월인지 묻고! else if문을
+        이용해서 현재 월에 해당하는 계절과 관련된 문구를 출력하라
+    </p>
+    <script>    
+        var mon = prompt("현재는 몇월 입니까?", "예)3월이면 3입력!")
+        if(mon >= 9 && mon <= 11){
+            document.write("독서의 계절 가을이네요!!", "<br>");
+        } else if (mon >= 6 && mon <= 8){
+            document.write("물놀이 하기 좋은 여름이네요!", "<br>");
+        } else if (mon >= 3 && mon <= 5){
+            document.write("햇살 가득한 봄이네요!", "<br>");
+        } else {
+            document.write("스키의 계절 겨울이네요!", "<br>");
+        }
+    
+    </script>
 </body>
 </html>
