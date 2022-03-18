@@ -7,6 +7,7 @@
 -제어문(controol statement) : if, else if
 중첩 if
 - 선택문 : switch~case
+- 반복문 : while, do~while, for
 
 # mission
 - p. 58 Mission I, II
