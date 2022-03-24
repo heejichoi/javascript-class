@@ -6,7 +6,7 @@ html {
 
 body {
     font: 16px/1.5 "Noto Sans KR", sans-serif;
-    background: url('../images/alarm-clock-g0c3928935_1920.jpg') no-repeat center / cover;
+    background:#fff url('../images/alarm-clock-g0c3928935_1920.jpg') no-repeat center / cover;
 }
 
 a, a:link {
@@ -29,6 +29,9 @@ a, a:link {
     display: flex;
     justify-content: space-between;
 }
+.top-wrap h1{
+   text-transform: capitalize;
+}
 .top-links {
     display: flex;
     column-gap: 15px;
@@ -38,7 +41,7 @@ a, a:link {
     text-transform: uppercase;
 }
 /* =========== section ==================== */
-.article-wrap {
+.article-wrap, #result_pop {
     width: 400px;
     height: 300px;
     position: absolute;
@@ -46,6 +49,24 @@ a, a:link {
     top: 50%;
     transform:translate(-50%, -50%);
     z-index: 100;
+}
+#result_pop{
+    z-index: 1000;
+    background: white;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+}
+#result_pop h1{
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+#result_pop p {
+    font-size: 1.250rem;
+    margin: 1rem 0;
+}
+#d_day strong{
+    color: red;
 }
 article h3, article p {
     color: #fff;
@@ -80,12 +101,14 @@ article p {
 }
 .form-list li input::placeholder{
     flex:9;
+    color: aliceblue;
+    
 }
 #user_year, #user_month, #user_date{
-    color: white;
+    color: purple;
     padding: 1rem 0;
     background: none;
-    border-color: white;
+    border-color: pink;
 }
 
 #dday_calc {
@@ -107,4 +130,41 @@ article p {
 .form-list li:nth-last-child(1) {
     justify-content: center;
     column-gap: 15px;
+}
+
+
+/*=======기존 스타일 마지막에 미디어쿼리! (권장)===========*/
+@media screen and (max-width: 480px) {
+    .top-wrap {
+        max-width: 100%; /* was 1190px */
+        padding: 0 1rem;
+        align-items: center;
+    }
+    .top-wrap h1{
+        font-size: 3.75rem;
+     }
+    #burger {
+        display: inline-block;
+    }
+    .top-links {
+        display: none;
+    }
+}
+@media screen and (max-width: 320px){
+    .article-wrap{
+        max-width: 93.75%;
+        left:50%;
+    }
+}
+@media screen and (max-width: 425px){
+    .article-wrap{
+        max-width: 93.75%;
+        left:50%;
+    }
+}
+@media screen and (max-width: 375px){
+    .article-wrap{
+        max-width: 93.75%;
+        left:50%;
+    }
 }
